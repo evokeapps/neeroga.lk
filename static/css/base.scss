@@ -1,0 +1,52 @@
+---
+---
+
+:root {
+  --color-1: #fdd93d;
+  --color-2: #1f4690;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.ff-serif {
+  font-family: 'Noto Serif Sinhala', serif;
+}
+
+.btn-link {
+  text-decoration: none;
+  color: var(--color-2) !important;
+}
+
+a {
+  text-decoration: none;
+  color: blueviolet;
+  color: var(--color-2) !important;
+}
+
+h3 {
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--color-2);
+  font-weight: bold;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--color-1);
+  margin-bottom: 1em;
+}
+
+.text-primary {
+  color: var(--color-2);
+}
+
+.text-warning {
+  color: var(--color-1);
+}
+
+.bg-warning {
+  background-color: var(--color-2) !important;
+}

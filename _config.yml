@@ -1,0 +1,7 @@
+title: නීරෝගා
+description: A health blog for Sri Lankans
+baseurl: ''
+url: ''
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
