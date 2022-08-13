@@ -2,12 +2,12 @@
 layout: default
 ---
 <div class="container">
-    <div class="my-5 bg-warning color-white p-5">
+    <div class="my-5 bg-warning p-5 rounded">
         <div class="row align-items-center justify-content-between row-cols-1 row-cols-md-2">
             <div class="col order-md-2 order-1">
-                <p class="fs-5 fw-bold text-muted">ආයුබෝවන්!</p>
-                <h1 class="mb-4 ff-serif">{{page.hero-title}}</h1>
-                <p class="text-muted fs-6 mb-4">{{page.hero-desc}}</p>
+                <div class="fs-5 mb-2 fw-bold text-light">ආයුබෝවන්!</div>
+                <div class="fs-2 mb-4 ff-serif text-warning">{{page.hero-title}}</div>
+                <div class="text-white fs-6 mb-4">{{page.hero-desc}}</div>
             </div>
             <div class="col order-md-1 order-2">
                 <img class="img-fluid" src="/static/img/hero-image.svg">
@@ -17,11 +17,13 @@ layout: default
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 g-5">
         {% for post in site.posts %}
         <div class="col">
-            <div class="border position-relative">
-                <img class="img-fluid rounded-0" src="{{post.img}}" alt="We all wait for summer">
-                <div class="p-3">
-                    <h5 class="mb-3 ff-serif">{{post.title}}</h5>
-                    <small class="text-primary">By {{post.author}} on {{post.date | date: "%-d %B %Y"}}</small>
+            <div class="position-relative h-100 hover-feedback">
+                <img class="img-fluid rounded" src="{{post.img}}" alt="We all wait for summer">
+                <div class="py-4">
+                    <h5 class="mb-3 ff-serif text-dark fw-bold">{{post.title}}</h5>
+                    <div class="text-muted">{{post.content | markdownify | truncatewords: 10}}</div>
+                    <small class="text-primary ff-sans"><strong>{{post.author}}</strong> · {{post.date | date: "%-d %B
+                        %Y"}}</small>
                 </div>
                 <a href="{{post.url | relative_url}}" class="stretched-link"></a>
             </div>

@@ -6,16 +6,16 @@
   --color-2: #1f4690;
 }
 
-body {
-  font-family: 'Noto Sans', sans-serif;
+* {
+  font-family: 'Noto Serif Sinhala', sans-serif !important;
 }
 
 .container {
   max-width: 1140px;
 }
 
-.ff-serif {
-  font-family: 'Noto Serif Sinhala', serif;
+.ff-sans {
+  font-family: 'Noto Sans', sans-serif;
 }
 
 .btn-link {
@@ -25,12 +25,11 @@ body {
 
 a {
   text-decoration: none;
-  color: blueviolet;
   color: var(--color-2) !important;
+  font-family: 'Noto Sans', sans-serif !important;
 }
 
 h3 {
-  font-family: 'Noto Sans', sans-serif;
   color: var(--color-2);
   font-weight: bold;
   padding-top: 1em;
@@ -40,13 +39,17 @@ h3 {
 }
 
 .text-primary {
-  color: var(--color-2);
+  color: var(--color-2) !important;
 }
 
 .text-warning {
-  color: var(--color-1);
+  color: var(--color-1) !important;
 }
 
 .bg-warning {
   background-color: var(--color-2) !important;
+}
+
+.hover-feedback:hover {
+  color: var(--color-2) !important;
 }
