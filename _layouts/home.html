@@ -1,32 +1,46 @@
 ---
 layout: default
 ---
+
 <div class="container">
-    <div class="my-5 p-5 rounded">
-        <div class="row align-items-center justify-content-between row-cols-1 row-cols-md-2">
-            <div class="col order-md-2 order-1">
-                <div class="fs-5 mb-2 fw-bold text-secondary ff-serif">ආයුබෝවන්!</div>
-                <div class="fs-2 mb-4 ff-serif text-primary">{{page.hero-title}}</div>
-                <div class="text-dark mb-4 ff-serif">{{page.hero-desc}}</div>
-            </div>
-            <div class="col order-md-1 order-2">
-                <img class="img-fluid" src="/static/img/hero-image.svg">
-            </div>
-        </div>
+  <div class="my-5 p-5 rounded">
+    <div
+      class="row align-items-center justify-content-between row-cols-1 row-cols-md-2"
+    >
+      <div class="col order-md-2 order-1">
+        <div class="fs-5 mb-2 fw-bold text-secondary ff-serif">ආයුබෝවන්!</div>
+        <div class="fs-2 mb-4 ff-serif text-primary">{{page.hero-title}}</div>
+        <div class="text-dark mb-4 ff-serif">{{page.hero-desc}}</div>
+      </div>
+      <div class="col order-md-1 order-2">
+        <img
+          class="img-fluid"
+          src="{{'/static/img/hero-image.svg' | relative_url}}"
+        />
+      </div>
     </div>
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 g-5">
-        {% for post in site.posts %}
-        <div class="col">
-            <div class="position-relative h-100">
-                <img class="img-fluid rounded" src="{{post.img}}" alt="We all wait for summer">
-                <div class="py-4">
-                    <h5 class="mb-2 text-primary fw-bold ff-serif">{{post.title}}</h5>
-                    <div class="text-muted mb-2">{{post.content | strip_html | truncatewords: 10}}</div>
-                    <small class="text-secondary fw-bold">{{post.date | date: "%-d %B %Y"}}</small>
-                </div>
-                <a href="{{post.url | relative_url}}" class="stretched-link"></a>
-            </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 g-5">
+    {% for post in site.posts %}
+    <div class="col">
+      <div class="position-relative h-100">
+        <img
+          class="img-fluid rounded"
+          src="{{post.img}}"
+          alt="We all wait for summer"
+        />
+        <div class="py-4">
+          <h5 class="mb-2 text-primary fw-bold ff-serif">{{post.title}}</h5>
+          <div class="text-muted mb-2">
+            {{post.content | strip_html | truncatewords: 10}}
+          </div>
+          <small class="text-secondary fw-bold"
+            >{{post.date | date: "%-d %B %Y"}}</small
+          >
         </div>
-        {% endfor %}
+        <a href="{{post.url | relative_url}}" class="stretched-link"></a>
+      </div>
     </div>
+    {% endfor %}
+  </div>
 </div>
