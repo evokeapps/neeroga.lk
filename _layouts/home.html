@@ -21,7 +21,7 @@ layout: default
                 <img class="img-fluid rounded" src="{{post.img}}" alt="We all wait for summer">
                 <div class="py-4">
                     <h5 class="mb-2 text-primary fw-bold ff-serif">{{post.title}}</h5>
-                    <div class="text-muted mb-2">{{post.content | markdownify | truncatewords: 10}}</div>
+                    <div class="text-muted mb-2">{{post.content | strip_html | truncatewords: 10}}</div>
                     <small class="text-secondary fw-bold">{{post.date | date: "%-d %B %Y"}}</small>
                 </div>
                 <a href="{{post.url | relative_url}}" class="stretched-link"></a>
