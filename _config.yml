@@ -1,7 +1,5 @@
 title: නීරෝගා
 description: Sinhala Health Magazine - ශ්‍රී ලාංකික සෞඛ්‍ය සඟරාව
-baseurl: ''
-url: ''
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
