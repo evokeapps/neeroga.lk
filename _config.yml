@@ -1,5 +1,6 @@
-title: නීරෝගා
-description: Sinhala Health Magazine - ශ්‍රී ලාංකික සෞඛ්‍ය සඟරාව
+title: Neeroga Health Magazine | නීරෝගා සෞඛ්‍ය සඟරාව
+navtitle: නීරෝගා
+description: Sinhala Online Health Magazine - සිංහල සෞඛ්‍ය සඟරාව
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
